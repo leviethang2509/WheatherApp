@@ -1,16 +1,5 @@
-# weather_app
+Sử dụng OpenWeatherMap lấy API KEY
+<img width="940" height="389" alt="image" src="https://github.com/user-attachments/assets/90c72d37-2734-4bdd-89fb-7035428f3241" />
 
-A new Flutter project. 
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Cấu hình API
+<img width="940" height="511" alt="image" src="https://github.com/user-attachments/assets/d8e03bd1-56fc-4200-9d59-8ac9bbf24606" />
