@@ -3,3 +3,6 @@ Sử dụng OpenWeatherMap lấy API KEY
 
 Cấu hình API
 <img width="940" height="511" alt="image" src="https://github.com/user-attachments/assets/d8e03bd1-56fc-4200-9d59-8ac9bbf24606" />
+
+Thực hiện các lệnh gọi API 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ff7e6d21-22f7-4c60-a313-3eb2045f3728" />
