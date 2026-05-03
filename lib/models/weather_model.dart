@@ -62,11 +62,7 @@ class WeatherModel {
   Map<String, dynamic> toJson() {
     return {
       'name': cityName,
-      'sys': {
-        'country': country,
-        'sunrise': sunrise,
-        'sunset': sunset,
-      },
+      'sys': {'country': country, 'sunrise': sunrise, 'sunset': sunset},
       'main': {
         'temp': temperature,
         'feels_like': feelsLike,
@@ -75,21 +71,13 @@ class WeatherModel {
         'temp_min': tempMin,
         'temp_max': tempMax,
       },
-      'wind': {
-        'speed': windSpeed,
-      },
+      'wind': {'speed': windSpeed},
       'weather': [
-        {
-          'description': description,
-          'icon': icon,
-          'main': mainCondition,
-        }
+        {'description': description, 'icon': icon, 'main': mainCondition},
       ],
       'dt': dateTime.millisecondsSinceEpoch ~/ 1000,
       'visibility': visibility,
-      'clouds': {
-        'all': cloudiness,
-      },
+      'clouds': {'all': cloudiness},
     };
   }
 }

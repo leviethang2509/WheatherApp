@@ -1,30 +1,34 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:weather_app/main.dart';
+import 'package:weather_app/models/weather_model.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const WeatherApp());
+  group('WeatherModel', () {
+    test('parse weather JSON correctly', () {
+      final weather = WeatherModel.fromJson({
+        'name': 'Ho Chi Minh City',
+        'sys': {'country': 'VN', 'sunrise': 1714600000, 'sunset': 1714644000},
+        'main': {
+          'temp': 31.0,
+          'feels_like': 35.0,
+          'humidity': 70,
+          'pressure': 1008,
+          'temp_min': 28.0,
+          'temp_max': 33.0,
+        },
+        'wind': {'speed': 4.2},
+        'weather': [
+          {'description': 'mây rải rác', 'icon': '03d', 'main': 'Clouds'},
+        ],
+        'dt': 1714620000,
+        'visibility': 10000,
+        'clouds': {'all': 40},
+      });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+      expect(weather.cityName, 'Ho Chi Minh City');
+      expect(weather.country, 'VN');
+      expect(weather.temperature, 31.0);
+      expect(weather.mainCondition, 'Clouds');
+      expect(weather.visibility, 10000);
+    });
   });
 }
