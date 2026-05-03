@@ -1,6 +1,6 @@
 # Báo cáo Lab 4 - Weather App
 
-**Sinh viên:** Lê Viết Thắng  
+**Sinh viên:** Lê Việt Thắng   MSSV : 2224802010263
 **Tên dự án:** `flutter_weather_app_LeVietThang`  
 **API sử dụng:** OpenWeatherMap
 
